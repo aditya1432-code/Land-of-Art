@@ -1,155 +1,18 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="images/png" href="LOA logo.png">
-  <title>The Land of Art</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <header>
-      <div class="nav">
-        <div class="brand">
-          <div class="logo"><img src="LOA logo.png" alt="Logo" class="logo"></div>
-          <div>
-            <div style="font-weight:700;font-size:21px">The Land of Art</div>
-          </div>
-        </div>
-        <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="site-menu">☰</button>
-        <nav id="site-menu">
-          <a href="#about">About</a>
-          <a href="#teams">Event</a>
-          <a href="#events">Team</a>
-          <a href="#gallery">Gallery</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </div>
-    </header>   
-
-    <script>
-      const menuButton = document.querySelector('.menu-toggle');
-      const siteMenu = document.querySelector('#site-menu');
-
-      menuButton.addEventListener('click', () => {
-        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
-        menuButton.setAttribute('aria-expanded', String(!isOpen));
-        menuButton.setAttribute('aria-label', isOpen ? 'Open navigation menu' : 'Close navigation menu');
-        siteMenu.classList.toggle('open', !isOpen);
-      });
-
-      siteMenu.addEventListener('click', (event) => {
-        if (event.target.closest('a')) {
-          siteMenu.classList.remove('open');
-          menuButton.setAttribute('aria-expanded', 'false');
-          menuButton.setAttribute('aria-label', 'Open navigation menu');
-        }
-      });
-    </script>
-
-    <main>
-      <section class="hero">
-        <div>
-          <div class="eyebrow">Welcome to</div>
-          <h1>THE <em>LAND</em> OF ART</h1>
-          <p class="lead">Where creativity meets legacy and every moment becomes art. <br> Where Ideas bloom into masterpieces.</p>
-          <a href="#about" class="cta">Explore events</a>
-        </div>
-      </section>
-
-      <section id="about" class="card">
-        <h2>About Us</h2>
-        <p style="color:var(--muted)">The Land of Art was founded with a single vision — to be the heartbeat of creativity on campus. We organize events, cultural fests, art exhibitions, design workshops, and interactive sessions that encourage imagination and expression. Every year, The Land of Art becomes a home for hundreds of passionate students who wish to express themselves through art and innovation.</p>
-      </section>
-
-      <section id="teams" class="grid-2">
-        <div class="card">
-          <h3>Creative Division</h3>
-          <p style="color:var(--muted)">Responsible for designs, art direction, and content creation. From poster art to stage setups — creativity starts here.</p>
-        </div>
-        <div class="card">
-          <h3>Technical Division</h3>
-          <p style="color:var(--muted)">Developers, tech leads, and engineers who make everything run smoothly — from websites to event systems.</p>
-        </div>
-        <div class="card">
-          <h3>Media & PR</h3>
-          <p style="color:var(--muted)">Handles photography, videography, social media presence, and documentation of all events and moments.</p>
-        </div>
-        <div class="card">
-          <h3>Management & Coordination</h3>
-          <p style="color:var(--muted)">Our planners and executors — the backbone that keeps The Land of Art operating with precision and flair.</p>
-        </div>
-      </section>
-
-      <section id="events" class="card">
-        <h2>Our Events</h2>
-        <ul style="color:var(--muted)">
-          <li><strong>Rangotsav:</strong> Our flagship cultural fest celebrating creativity across genres.</li>
-          <li><strong>Land of Art Night:</strong> An evening of music, dance, and live performances.</li>
-          <li><strong>Tech & Art Fusion:</strong> A unique collaboration between art and technology.</li>
-          <li><strong>Workshops:</strong> Design, photography, theatre, and creative writing sessions throughout the year.</li>
-        </ul>
-      </section>
-
-      <section id="gallery" class="card">
-        <h2>Gallery</h2>
-        <div class="gallery">
-          <div class="thumb"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1200&auto=format&fit=crop" alt="Art"><div class="tag">Art</div></div>
-          <div class="thumb"><img src="2.JPG" alt="Performance"><div class="tag">Performance</div></div>
-          <div class="thumb"><img src="1.JPG" alt="Team"><div class="tag">Team</div></div>
-        </div>
-      </section>
-
-      <section id="founders" class="card2">
-        <center><h2>Founders</h2></center>
-        <div class="founders">
-          <div class="person">
-            <img src="YT.jpg" alt="Founder">
-            <h4>Yash Tyagi</h4>
-            <p style="color:var(--muted)">Founder (2022-2026)</p>
-          </div>
-          <div class="person">
-            <img src="TM.JPG" alt="Co-Founder">
-            <h4>Tapan Mishra</h4>
-            <p style="color:var(--muted)">Co-Founder (2023-2027)</p>
-          </div>
-          <div class="person">
-            <img src="" alt="Co-Founder">
-            <h4>Chirag Bajwan</h4>
-            <p style="color:var(--muted)">Co-Founder (2023-2027)</p>
-          </div>
-          <div class="person">
-            <img src="" alt="Co-Founder">
-            <h4>Sajid Siddqui</h4>
-            <p style="color:var(--muted)">Co-Founder (2023-2027)</p>
-          </div>
-          <div class="person">
-            <img src="unnamed.webp" alt="Co-Founder">
-            <h4>Aditya Sharma</h4>
-            <p style="color:var(--muted)">Co-Founder (2024-2028)</p>
-          </div>
-        </div>
-      </section>
-
-      <section id="contact">
-        <h2>Contact Us</h2>
-        <p style="color:var(--muted)">Got an idea, collaboration proposal, or just want to be a part of The Land of Art? Reach out!</p>
-        <form onsubmit="event.preventDefault();alert('Message Sent! (Demo)')">
-          <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap">
-            <input required placeholder="Your name" style="flex:1;padding:10px;border-radius:8px;border:0;background:rgba(255,255,255,0.03);color:inherit">
-            <input required placeholder="Email" style="flex:1;padding:10px;border-radius:8px;border:0;background:rgba(255,255,255,0.03);color:inherit">
-          </div>
-          <textarea required placeholder="Message" style="width:100%;margin-top:8px;padding:10px;border-radius:8px;border:0;background:rgba(255,255,255,0.03);color:inherit;height:110px"></textarea>
-          <div style="margin-top:8px"><button class="cta" type="submit">Send Message</button></div>
-        </form>
-      </section>
-
-      <footer>
-        <small>The Land of Art | &copy; All Rights Reserved </small>
-      </footer>
-    </main>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4e8dc" />
+    <meta name="description" content="Where creativity meets legacy and every moment becomes art." />
+    <link rel="icon" type="image/png" href="/LOA%20logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>The Land of Art</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
